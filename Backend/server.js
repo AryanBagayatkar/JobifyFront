@@ -19,7 +19,7 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-const MONGO_URI = "mongodb+srv://popswea:dbpopswea@cluster3.zmuj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3";
+const MONGO_URI = "mongodb+srv://popswea:<db_password>@cluster3.zmuj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3";
 
 mongoose
   .connect(MONGO_URI)

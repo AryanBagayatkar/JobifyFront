@@ -65,16 +65,7 @@ const PostForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="mb-3">
-          <label className="form-label">PDF (URL)</label>
-          <input
-            type="text"
-            className="form-control"
-            name="pdf"
-            value={formData.pdf}
-            onChange={handleChange}
-          />
-        </div>
+       
         <button type="submit" className="btn btn-primary w-100">Submit</button>
       </form>
     </div>

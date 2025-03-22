@@ -9,6 +9,7 @@ const cors = require("cors");
 const fs = require("fs");
 const JobRoutes = require("../Backend/routes/jobRoutes")
 const PostRoutes = require('./routes/postRoutes')
+const authRoutes = require("./routes/authRoutes");
 const app = express();
 const server = http.createServer(app);
 
@@ -30,8 +31,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/jobs", JobRoutes);
 app.use("/api/posts", PostRoutes);
+app.use("/api/auth", authRoutes);
 
 
 // ✅ Ensure uploads directory exists

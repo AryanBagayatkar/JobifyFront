@@ -110,7 +110,6 @@ export default function messages() {
     
       <div className="chat-container d-flex">
         <div className="contacts-list">
-          <h5>Contacts</h5>
           <ul className="list-unstyled">
             {contacts.map((contact) => (
               <li key={contact.id}>

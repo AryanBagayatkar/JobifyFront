@@ -1,20 +1,32 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Link , useNavigate ,useLocation } from 'react-router-dom';
 import { Navbar, Container, Nav, Form, FormControl, InputGroup } from 'react-bootstrap';
-import { Search, Bell, PersonCircle } from 'react-bootstrap-icons';
+import { Search, Bell } from 'react-bootstrap-icons';
+import { LuLogIn } from "react-icons/lu";
+import { FiLogOut } from "react-icons/fi";
 import { TbMessageDots } from "react-icons/tb";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 
 const Navbarh = () => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const username = location.state?.username;
+
+  const handleLogout = () => {
+    navigate("/"); // Redirect to login page
+  };
+
   return (
-    <Navbar expand="lg" className="linkedin-navbar">
+    <Navbar expand="lg" className="linkedin-navbar sticky-top">
       <Container>
         <Navbar.Brand href="/" className="navbar-brand">
-          <h1 className="text-white">Job<span className='logo'>ify</span></h1>
+          <h1>Job<span className='logo'>ify</span></h1>
         </Navbar.Brand>
+
+     
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-         
           {/* Right Side Icons */}
           <Nav className="ml-auto align-items-center navri">
              {/* Search Bar */}
@@ -44,10 +56,27 @@ const Navbarh = () => {
               <TbMessageDots size={20} />
               <p>Message</p>
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/profile" className="nav-icon">
-              <PersonCircle size={20} />
-              <p>Profile</p>
-            </Nav.Link>
+            <Nav.Link as={NavLink} to="/login" className="nav-icon">
+            <ul >
+            {username ? (
+              <>
+                <li>
+                  <button className=" nav-link nav-icon" onClick={handleLogout}>
+                    <FiLogOut  />
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link className="nav-link nav-icon text-decoration-none text-dark" to="/login">
+                <LuLogIn />
+                  Login
+                </Link>
+              </li>
+            )}
+          </ul>
+          </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -21,7 +21,7 @@ const JobDetail = () => {
 
   return (
     <div className="container my-5">
-      <div className="card bg-dark text-light p-4">
+      <div className="card bg-light text-dark p-4">
         <h2>{job.jobName}</h2>
         <p>Company: {job.companyName}</p>
         <p>Location: {job.location}</p>
@@ -29,7 +29,7 @@ const JobDetail = () => {
         <p>Description: {job.description}</p>
         <p>Skills: {job.skills}</p>
         <p>Perks: {job.perks}</p>
-        <div className="btn btn-primary">Apply Now</div>
+        <div className="btn btn-warning">Apply Now</div>
       </div>
     </div>
   );

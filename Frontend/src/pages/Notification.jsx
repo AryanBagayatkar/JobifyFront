@@ -45,16 +45,15 @@ const Notification = () => {
   ];
   return (
     <div className="container mt-5">
-      <h1 className="text-start mb-4">Notifications</h1>
       <div className="list-group">
         {notifications.map((notification) => (
           <div
             key={notification.id}
-            className="list-group-item d-flex align-items-center bg-dark text-light mb-2 rounded"
+            className="list-group-item d-flex align-items-center bg-light text-dark mb-2 rounded border-dark"
           >
             <div>
               <h5 className="mb-1">{notification.username}</h5>
-              <p className="mb-0 text-light">{notification.description}</p>
+              <p className="mb-0 text-muted">{notification.description}</p>
             </div>
           </div>
         ))}

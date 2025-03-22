@@ -12,6 +12,9 @@ import Post from './components/Post';
 import JobDetail from './components/JobDetails';
 import JobForm from './pages/JobForm';
 import PostForm from './components/PostForm';
+import RegisterForm from './pages/RegisterForm';
+import LoginForm from './pages/LoginForm';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
   return (
@@ -22,12 +25,16 @@ function App() {
           <Route path="job" element={<JobList />} />
           <Route path="posts" element={<Post />} />
           <Route path="/create-post" element={<PostForm />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<PrivateRoute>
+              <Profile />
+            </PrivateRoute>} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/associations" element={<Associations />} />
           <Route path="/add-job" element={<JobForm />} />
           <Route path="/job/:id" element={<JobDetail />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
         </Routes>
     </Router>
   );

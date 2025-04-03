@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import  Activity  from "../components/Activity";
 
 const Post = () => {
   const [posts, setPosts] = useState([]);
@@ -72,6 +73,7 @@ const Post = () => {
 
   return (
     <div className="container">
+      <Activity />
       {posts.map((post) => (
         <div className="card mb-3" key={post._id}>
           <div className="card-body">
@@ -93,7 +95,7 @@ const Post = () => {
                 className="btn"
                 style={{
                   backgroundColor:
-                    activeButtons[post._id]?.like ? "yellow" : "",
+                    activeButtons[post._id]?.like ? "skyblue" : "",
                 }}
               >
                 Like
@@ -103,7 +105,7 @@ const Post = () => {
                 className="btn"
                 style={{
                   backgroundColor:
-                    activeButtons[post._id]?.dislike ? "yellow" : "",
+                    activeButtons[post._id]?.dislike ? "skyblue" : "",
                 }}
               >
                 Dislike
@@ -113,7 +115,7 @@ const Post = () => {
                 className="btn"
                 style={{
                   backgroundColor:
-                    activeButtons[post._id]?.share ? "yellow" : "",
+                    activeButtons[post._id]?.share ? "aqua" : "",
                 }}
               >
                 Share
@@ -123,7 +125,7 @@ const Post = () => {
                 className="btn"
                 style={{
                   backgroundColor:
-                    activeButtons[post._id]?.comment ? "yellow" : "",
+                    activeButtons[post._id]?.comment ? "aqua" : "",
                 }}
               >
                 Comment

@@ -1,13 +1,14 @@
 body{
-  background: linear-gradient(25deg, white, #80ffdb);
   list-style: none;
   color: black;
+  background: linear-gradient(25deg, white , #80ffdb);
 }
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
   display: none;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -16,26 +17,36 @@ body{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0077b5; 
+  background: #0077b5;
 }
 .linkedin-navbar {
-  background-color: #ced4da;
+  background-color: white;
   color: black; /* LinkedIn's dark blue color */
   padding: 0.5rem 1rem;
-  border-bottom: 2px solid black;
+
+  border-bottom: 3.5px solid black;
 }
 ul{
   list-style: none;
   padding: 0;
   color:  #000000;
 }
+.Fixxx{
+  margin: 0;
+}
 .navbar-brand {
   display: flex;
   align-items: center;
 }
 
+.navbar-nav .nav-link:hover{
+  transform: scaleY(1.1);
+}
 .navbar-nav .nav-link.active{
-  color: #ffda3d;
+  color: #25856a;
+}
+.nav-link p{
+  font-size: 20px;
 }
 .navri{
   margin-left: 70%;
@@ -45,11 +56,13 @@ ul{
   margin: 0 auto; /* Center alignment */
 }
 
+
 .search-input {
   border-radius: 0 20px 20px 0; /* Right rounded corners */
   border-left: none; /* Remove left border */
   box-shadow: none; /* Remove default shadow */
 }
+
 
 .search-icon {
   color: black; /* Icon color */
@@ -57,17 +70,20 @@ ul{
   border: none; /* Remove border */
 }
 
+
 .nav-icon {
   color:  #000;
   margin-left: 1rem;
   transition: color 0.3s ease;
 }
 
+
 /* General container styling */
 .sect1{
   width: 100%;
   display: flex;
   height: 100%;
+  background: linear-gradient(55deg, white, #80ffdb);
 }
 @media (max-width: 968px) {
   .sect1, .part1, .sect2 {
@@ -78,9 +94,9 @@ ul{
 
 .sect2{
   width: 100%;
+  height: 100%;
   display: flex;
-  height: 84vh;
-  background: linear-gradient(25deg, #80ffdb , white);
+  background: linear-gradient(55deg, white , #80ffdb);
 }
 .sect1 .part{
   width: 50%;
@@ -90,9 +106,8 @@ ul{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.sect2 .part{
+.sect2 .part1{
   width: 50%;
   padding: 30px;
   height: 100%;
@@ -100,7 +115,6 @@ ul{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .part2{
   width: 50%;
@@ -112,23 +126,31 @@ ul{
   left: 0;
   margin-top: 30%;
 }
+.part1 h1{
+  top: 0;
+  left: 0;
+  margin-top: 30%;
+}
 .partl{
   text-decoration: none;
+  font-size: 20px;
 }
-.part .bho1{
+ .bho1{
   background-color: transparent;
   width: 55%;
   margin: 30px 25px;
   padding: 10px 30px;
   border: 2px solid black;
   border-radius: 25px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 .bho2{
-  background-color: #ced4da;
+  background-color: transparent;
   width: 55%;
   margin: 30px 25px;
   padding: 10px 30px;
   border: 2px solid black;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
   border-radius: 25px;
 }
 /* Section styling */
@@ -138,6 +160,7 @@ ul{
   gap: 20px;
 }
 
+
 .section {
   background: rgba(255, 255, 255, 0.1);
   padding: 15px;
@@ -145,10 +168,12 @@ ul{
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
 .section:hover {
   transform: scale(1.05);
   box-shadow: 0px 8px 20px rgba(0, 188, 212, 0.5);
 }
+
 
 .section-title {
   font-size: 1.5rem;
@@ -156,11 +181,13 @@ ul{
   margin-bottom: 10px;
 }
 
+
 .section-tagline {
   font-size: 1rem;
   color: #b0bec5;
   margin-bottom: 15px;
 }
+
 
 /* Button styling */
 .section-button {
@@ -172,23 +199,29 @@ ul{
   transition: background-color 0.3s ease-in-out;
 }
 
+
 .section-button.btn-primary {
   background-color: #00bcd4;
   border: none;
 }
 
+
 .section-button.btn-primary:hover {
   background-color: #008c9e;
 }
+
 
 .section-button.btn-secondary {
   background-color: #ff5722;
   border: none;
 }
 
+
 .section-button.btn-secondary:hover {
   background-color: #e64a19;
 }
+
+
 
 
 .stories-container {
@@ -196,14 +229,16 @@ ul{
   align-items: center;
   overflow-x: auto;
   padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #0000;
   border-radius: 10px;
 }
+
 
 .stories-scroll {
   display: flex;
   gap: 15px; /* Space between stories */
 }
+
 
 .story {
   display: flex;
@@ -213,14 +248,16 @@ ul{
   width: 80px;
 }
 
+
 .story-image {
   position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid skyblue;
+  border: 3px solid black;
 }
+
 
 .story-image img {
   width: 100%;
@@ -228,15 +265,17 @@ ul{
   object-fit: cover;
 }
 
+
 .story-name {
   margin-top: 8px;
   font-size: 0.85rem;
-  color: #fff;
+  color: #111;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   max-width: 80px;
 }
+
 
 .filter-container {
   display: flex;
@@ -247,6 +286,7 @@ ul{
   border-radius: 10px;
 }
 
+
 .filter-item {
   padding: 10px 15px;
   border: 1px solid #fff; /* LinkedIn Blue */
@@ -255,6 +295,7 @@ ul{
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 
 .filter-item:hover {
   background-color: #0077b5;
@@ -286,11 +327,13 @@ ul{
   padding-right: 50px;
 }
 
+
 .job-title {
   font-size: 1.25rem;
   color: #fff;
   margin-bottom: 10px;
 }
+
 
 .job-detail {
   font-size: 0.95rem;
@@ -315,6 +358,7 @@ ul{
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 .profile-header {
   display: flex;
   align-items: center;
@@ -323,6 +367,7 @@ ul{
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
+
 
 .profile-picture {
   position: relative;
@@ -333,11 +378,13 @@ ul{
   border: 3px solid white;
 }
 
+
 .profile-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 
 .edit-icon {
   position: absolute;
@@ -351,27 +398,32 @@ ul{
   cursor: pointer;
 }
 
+
 .profile-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
+
 .profile-field {
   padding: 10px;
   border-radius: 5px;
 }
+
 
 .profile-field strong {
   display: block;
   color: #ffcc00;
 }
 
+
 @media (max-width: 600px) {
   .profile-details {
     grid-template-columns: 1fr;
   }
 }
+
 
 /* message */
 /* ✅ Chat Layout */
@@ -380,6 +432,7 @@ ul{
   height: 84vh;
   display: flex;
 }
+
 
 /* ✅ Contacts Sidebar */
 .contacts-list {
@@ -391,10 +444,12 @@ ul{
   flex-direction: column;
 }
 
+
 .contacts-list h5 {
   color: black;
   margin-bottom: 15px;
 }
+
 
 .contacts-list ul {
   list-style: none;
@@ -402,6 +457,7 @@ ul{
   flex-grow: 1;
   overflow-y: auto;
 }
+
 
 .contacts-list li {
   padding: 8px;
@@ -411,10 +467,12 @@ ul{
   color: black;
 }
 
+
 .contacts-list li:hover,
 .contacts-list li.active {
-  background: #ffcc00;
+  background: #80ffdb;
 }
+
 
 .contacts-list button {
   border: none;
@@ -427,15 +485,18 @@ ul{
   color: black;
 }
 
+
 .contacts-list button:hover,
 .contacts-list .active {
   background: rgba(255, 255, 255, 0.1);
 }
 
+
 .contacts-list button div {
   font-size: 0.85rem;
   color: lightgray;
 }
+
 
 .contacts-list hr {
   border: none;
@@ -444,6 +505,7 @@ ul{
   margin: 8px 0;
 }
 
+
 /* ✅ Chat Box */
 .chat-box {
   width: 75%;
@@ -451,9 +513,10 @@ ul{
   flex-direction: column;
 }
 
+
 /* ✅ Chat Header */
 .chat-header {
-  background: #ffcc00;
+  background: #80ffdb;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -462,10 +525,12 @@ ul{
   border-bottom: 5px solid black;
 }
 
+
 .chat-header h5 {
   margin: 0;
   font-weight: bold;
 }
+
 
 .chat-header small {
   display: block;
@@ -473,9 +538,11 @@ ul{
   color: #ddd;
 }
 
+
 .menu-icon {
   cursor: pointer;
 }
+
 
 /* ✅ Chat Messages */
 .chat-body {
@@ -486,6 +553,7 @@ ul{
   display: flex;
   flex-direction: column;
 }
+
 
 /* ✅ Message Styling */
 .message {
@@ -498,6 +566,7 @@ ul{
   flex-direction: column;
 }
 
+
 .sent {
   background: #000;
   color: white;
@@ -505,12 +574,14 @@ ul{
   text-align: right;
 }
 
+
 .received {
   background: #444;
   color: white;
   align-self: flex-start;
   text-align: left;
 }
+
 
 /* ✅ File Link Styling */
 .file-link {
@@ -522,9 +593,11 @@ ul{
   margin-top: 5px;
 }
 
+
 .file-link:hover {
   color: white;
 }
+
 
 /* ✅ Chat Footer */
 .chat-footer {
@@ -533,6 +606,7 @@ ul{
   padding: 10px;
   background: #111;
 }
+
 
 .chat-footer input {
   flex-grow: 1;
@@ -543,8 +617,9 @@ ul{
   color: black;
 }
 
+
 .send-btn {
-  background: #ffcc00;
+  background: #80ffdb;
   color: black;
   border: none;
   padding: 12px 20px;
@@ -554,13 +629,16 @@ ul{
   transition: 0.3s ease-in-out;
 }
 
+
 .send-btn:hover {
   background: #0056b3;
 }
 
+
 .send-btn:active {
   transform: scale(0.98);
 }
+
 
 /* ✅ Attachment Button */
 .attach-btn {
@@ -572,6 +650,7 @@ ul{
   position: relative;
 }
 
+
 /* ✅ Hidden File Input */
 .attach-btn input {
   position: absolute;
@@ -582,6 +661,7 @@ ul{
   height: 100%;
   cursor: pointer;
 }
+
 
 /* ✅ File Preview */
 .file-preview {
@@ -596,28 +676,34 @@ ul{
   color: lightgreen;
 }
 
+
 .message-status.error {
   color: red;
 }
+
 
 .job-box-vertical {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .job-box-vertical h5 {
   font-size: 1.5rem;
   color: #007bff;
 }
+
 
 .job-detail {
   font-size: 0.9rem;
   margin: 0;
 }
 
+
 .detail button {
   border-radius: 8px;
 }
+
 
 .agh{
   height: 80vh;

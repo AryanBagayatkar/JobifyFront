@@ -62,7 +62,7 @@ const LoginForm = () => {
           />
         </div>
         {error && <div className="alert alert-danger">{error}</div>}
-        <button type="submit" className="btn btn-warning">
+        <button type="submit" className="btn btn-primary w-100">
           Login
         </button>
         <p className="mt-3">

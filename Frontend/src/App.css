@@ -19,7 +19,7 @@ body{
   background: #0077b5; 
 }
 .linkedin-navbar {
-  background-color: white;
+  background-color: #ced4da;
   color: black; /* LinkedIn's dark blue color */
   padding: 0.5rem 1rem;
   border-bottom: 2px solid black;
@@ -124,7 +124,7 @@ ul{
   border-radius: 25px;
 }
 .bho2{
-  background-color: #ffcc00;
+  background-color: #ced4da;
   width: 55%;
   margin: 30px 25px;
   padding: 10px 30px;

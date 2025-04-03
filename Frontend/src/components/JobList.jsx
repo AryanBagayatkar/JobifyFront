@@ -61,7 +61,7 @@ const JobList = () => {
             <p className="card-text">Salary: {job.salary}</p>
             </div>
             <div>
-            <Link to={`/job/${job._id}`} className="btn btn-warning">
+            <Link to={`/job/${job._id}`} className="btn btn-primaary">
               Details
             </Link>
             </div>

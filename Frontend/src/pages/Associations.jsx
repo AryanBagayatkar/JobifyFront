@@ -52,7 +52,7 @@ const Associations = () => {
                   <h5 className="card-title">{user.name}</h5>
                   <p className="card-text text-muted">{user.profession}</p>
                   <button
-                    className={`btn ${isConnected ? "btn-secondary" : "btn-warning"}`}
+                    className={`btn ${isConnected ? "btn-secondary" : "btn-primary"}`}
                     disabled={isConnected}
                     onClick={() => handleConnect(user)}
                   >

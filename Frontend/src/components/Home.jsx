@@ -1,33 +1,85 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import homedisk from "../../public/vecteezy_isometric-illustration-concept-of-a-couple-analyzing_9160218.svg"
+import React from 'react';
+import { NavLink , Link , useNavigate ,useLocation } from 'react-router-dom';
+import { Navbar, Container, Nav, Form, FormControl, InputGroup } from 'react-bootstrap';
+import { Search, Bell } from 'react-bootstrap-icons';
+import { LuLogIn } from "react-icons/lu";
+import { FiLogOut } from "react-icons/fi";
+import { TbMessageDots } from "react-icons/tb";
+import { LiaUserFriendsSolid } from "react-icons/lia";
 
-const Home = () => {
+const Navbarh = () => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const username = location.state?.username;
+
+  const handleLogout = () => {
+    navigate("/"); // Redirect to login page
+  };
+
   return (
-    <>
-    <div className="sect1">
-      <div className="part">
-        <h1>Welcome To Jobify</h1>
-        <button className="bho1"><Link to="/login" className="partl">login</Link></button>
-        <p>New to Jobify</p>
-        <button className="bho2"><Link to="/register" className="partl text-dark">Register</Link></button>
-      </div>
-      <div className="part">
-        <img src={homedisk} alt="An image" className="himg"/>
-      </div>
-    </div>
-    <div className="sect2">
-      <div className="part">
-      <h1>Get Hire</h1>
-      <button className="bho1"><Link to="/job" className="partl">Find Jobs</Link></button>
-      </div>
-      <div className="part">
-      <h1>Explore Community</h1>
-      <button className="bho2"><Link to="/posts" className="partl text-dark">Share Achivements</Link></button>
-      </div>
-    </div>
-    </>
+    <Navbar expand="lg" className="linkedin-navbar sticky-top">
+      <Container>
+        <Navbar.Brand href="/" className="navbar-brand">
+          <h1>Job<span className='logo'>ify</span></h1>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
+          {/* Right Side Icons */}
+          <Nav className="ml-auto align-items-center navri">
+             {/* Search Bar */}
+          {/* <div className="search-container">
+            <Form>
+              <InputGroup>
+                <InputGroup.Text className="search-icon">
+                  <Search />
+                </InputGroup.Text>
+                <FormControl
+                  type="search"
+                  placeholder="Search"
+                  className="search-input"
+                />
+              </InputGroup>
+            </Form>
+          </div> */}
+            <Nav.Link as={NavLink} to="/associations" className="nav-icon">
+              <LiaUserFriendsSolid size={27} />
+              <p>Friends</p>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/notifications" className="nav-icon">
+              <Bell size={25} />
+              <p>Notifications</p>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/messages" className="nav-icon">
+              <TbMessageDots size={25} />
+              <p>Message</p>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/login" className="nav-icon">
+            <ul className='Fixxx'>
+            {username ? (
+              <>
+                <li>
+                  <button className=" nav-link nav-icon" onClick={handleLogout}>
+                    <FiLogOut  size={25}/>
+                    <p>Logout</p> 
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link className="nav-link nav-icon text-decoration-none text-dark" to="/login">
+                <LuLogIn size={25}/>
+                  <p>Login</p>
+                </Link>
+              </li>
+            )}
+          </ul>
+          </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Home;
+export default Navbarh;

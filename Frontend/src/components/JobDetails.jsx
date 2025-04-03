@@ -29,7 +29,7 @@ const JobDetail = () => {
         <p>Description: {job.description}</p>
         <p>Skills: {job.skills}</p>
         <p>Perks: {job.perks}</p>
-        <div className="btn btn-warning">Apply Now</div>
+        <div className="btn btn-primary">Apply Now</div>
       </div>
     </div>
   );

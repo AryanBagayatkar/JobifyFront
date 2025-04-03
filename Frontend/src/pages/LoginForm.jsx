@@ -31,8 +31,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <form onSubmit={handleSubmit}>
+    <div className="container m-5 h-full">
+      <form onSubmit={handleSubmit} >
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
             Username
@@ -65,7 +65,7 @@ const LoginForm = () => {
         <button type="submit" className="btn btn-primary w-100">
           Login
         </button>
-        <p className="mt-3">
+        <p className="mt-5">
           Don't have an account? <Link to="/register" className="text-dark text-decoration-none">Register</Link>
         </p>
       </form>

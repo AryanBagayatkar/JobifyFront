@@ -23,8 +23,6 @@ const Navbarh = () => {
         <Navbar.Brand href="/" className="navbar-brand">
           <h1>Job<span className='logo'>ify</span></h1>
         </Navbar.Brand>
-
-     
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           {/* Right Side Icons */}
@@ -45,33 +43,33 @@ const Navbarh = () => {
             </Form>
           </div> */}
             <Nav.Link as={NavLink} to="/associations" className="nav-icon">
-              <LiaUserFriendsSolid size={20} />
+              <LiaUserFriendsSolid size={27} />
               <p>Friends</p>
             </Nav.Link>
             <Nav.Link as={NavLink} to="/notifications" className="nav-icon">
-              <Bell size={20} />
+              <Bell size={25} />
               <p>Notifications</p>
             </Nav.Link>
             <Nav.Link as={NavLink} to="/messages" className="nav-icon">
-              <TbMessageDots size={20} />
+              <TbMessageDots size={25} />
               <p>Message</p>
             </Nav.Link>
             <Nav.Link as={NavLink} to="/login" className="nav-icon">
-            <ul >
+            <ul className='Fixxx'>
             {username ? (
               <>
                 <li>
                   <button className=" nav-link nav-icon" onClick={handleLogout}>
-                    <FiLogOut  />
-                    Logout
+                    <FiLogOut  size={25}/>
+                    <p>Logout</p> 
                   </button>
                 </li>
               </>
             ) : (
               <li>
                 <Link className="nav-link nav-icon text-decoration-none text-dark" to="/login">
-                <LuLogIn />
-                  Login
+                <LuLogIn size={25}/>
+                  <p>Login</p>
                 </Link>
               </li>
             )}

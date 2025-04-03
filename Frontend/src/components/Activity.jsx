@@ -14,10 +14,10 @@ const Activity = () => {
     <div className="stories-container">
       <div className="stories-scroll">
         {stories.map((story) => (
-          <div key={story.id} className="story text-white">
+          <div key={story.id} className="story text-dark">
             <div className="story-image">
             </div>
-            <div className="story-name text-white">{story.name}</div>
+            <div className="story-name text-dark">{story.name}</div>
           </div>
         ))}
       </div>

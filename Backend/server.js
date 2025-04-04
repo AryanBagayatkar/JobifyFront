@@ -12,15 +12,14 @@ const PostRoutes = require('./routes/postRoutes')
 const authRoutes = require("./routes/authRoutes");
 const app = express();
 const server = http.createServer(app);
-const userProfileRoutes = require("./routes/userProfileRoutes");
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "http://localhost:5173"],
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
-const MONGO_URI = "mongodb+srv://midhun10:2023HE0511@cluster1.acpvjxf.mongodb.net/";
+const MONGO_URI = "mongodb+srv://popswea:dbpopswea@cluster3.zmuj3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3";
 
 mongoose
   .connect(MONGO_URI)
@@ -36,8 +35,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/jobs", JobRoutes);
 app.use("/api/posts", PostRoutes);
 app.use("/api/auth", authRoutes);
-app.use("/api/profile", userProfileRoutes);
-
 
 
 // ✅ Ensure uploads directory exists
